@@ -11,20 +11,41 @@
   padding: 0;
   margin: 0;
   font-family: Axiforma;
+  box-sizing: border-box;
 }
 
 .body-color {
-  background-color: #fcedeb;
+  background-color: #EFF3F9;
 }
 
 .header {
-  padding: 1.4rem 1rem;
-  background-color: white;
+  padding: 1rem 1rem;
+  background-color: var(--primary-background);
+}
+
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header nav span {
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.header nav a {
+  font-size: .9rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
 }
 
 .main-content {
   max-width: 81.25rem;
-  height: 100vh;
+  padding: 1.25rem 1.25rem;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -43,9 +64,31 @@
   max-width: 100%;
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.filter label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.filter input {
+  font-size: .9rem;
+  outline: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #e7e2e7;
+  background: #f2ecf2;
+  color: black;
+  font-weight: 600;
 }
 
 .new-client-button {
@@ -60,8 +103,9 @@
   border: 0;
   font-weight: 500;
   background-color: var(--primary-background);
-  padding: 0.4rem 1rem;
   color: white;
+  cursor: pointer;
+  padding: 0.4rem 1rem;
 }
 
 .new-client-button:hover {
@@ -72,7 +116,7 @@
   color: white;
 }
 
-.new-client-button > span {
+.new-client-button >  span {
   color: white;
 }
 
@@ -103,7 +147,7 @@
   width: 100%;
   min-width: auto;
   max-width: 500px;
-  margin: auto;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -160,12 +204,12 @@
   max-width: 70%;
 }
 
-label {
+.field label {
   font-weight: 600;
   font-size: 0.9rem;
 }
 
-input {
+.field input {
   padding: 0.3rem 0.6rem;
   border-radius: 6px;
   border: 1px solid #e7e2e7;
@@ -221,10 +265,47 @@ input::placeholder {
 }
 
 .datatable {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.007);
+  width: 100%;
   background-color: white;
   max-height: 37.5rem;
   min-height: 37.5rem;
   overflow-y: auto;
+}
+
+.datatable::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.datatable::-webkit-scrollbar {
+  width: 6px;
+  height: 2px;
+	background-color: #F5F5F5;
+}
+
+.datatable::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.1);
+	background-color: #555;
+}
+
+.table td::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.1);
+	background-color: #555;
+}
+
+.table td::-webkit-scrollbar-track-piece {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+.table td::-webkit-scrollbar {
+  height: 4px;
+  background-color: #F5F5F5;
 }
 
 .table {
@@ -232,13 +313,20 @@ input::placeholder {
   border-collapse: collapse;
   background-color: #fff;
   font-family: sans-serif;
-  border: 1px solid #e5e5e5;
 }
 
 .table thead {
   z-index: 1;
   position: sticky;
   top: 0;
+}
+
+thead tr th {
+  border: 1px solid rgb(235, 231, 231);
+}
+
+tbody td {
+  border: 1px solid rgb(235, 231, 231);
 }
 
 .table thead th {
@@ -257,7 +345,7 @@ input::placeholder {
 }
 
 .table tbody td {
-  padding: .625rem;
+  padding: 1rem;
   text-align: left;
   color: #241937;
   font-weight: 600;
@@ -268,19 +356,28 @@ input::placeholder {
   background-color: #f5f5f5;
 }
 
+tr:hover {
+  cursor: pointer;
+  background-color: #f5f5f5;
+}
+
 .table tbody td:nth-child(2) {
   color: var(--primary-background);
 }
 
 .table th,
 .table td {
-  min-width: 12.5;
-  max-width: 12.5;
+  width: 100%;
+  min-width: 12.5rem;
+  max-width: 12.5rem;
   overflow-y: auto;
+  white-space: nowrap;
 }
 
 .options {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: .5rem;
 }
 
@@ -294,6 +391,7 @@ input::placeholder {
   background-color: var(--primary-background);
   color: white;
   cursor: pointer;
+  font-size: 1.25rem;
 }
 
 .edit-button:hover {
@@ -310,58 +408,24 @@ input::placeholder {
   background-color: #fb8f8f;
   color: white;
   cursor: pointer;
+  font-size: 1.25rem;
 }
 
 .trash-button:hover {
   background-color: #d45f5f;
 }
 
-@media screen (max-width: 768px) {
-  .table {
-    font-size: 0.9rem;
-  }
-
-  .table thead th {
-    padding: 0.313rem;
-  }
-
-  .table tbody td {
-    padding: 0.313rem;
-  }
-}
-
-.toast {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px #ccc;
-  z-index: 1000;
-}
-
-.toast .titulo {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.toast .mensagem {
-  font-size: 14px;
-}
-
 .loader {
+  padding-top: .85rem;
   display: none;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
 }
 
 .loader-table {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
 	border: .2em dotted currentcolor;
 	border-radius: 50%;
 	animation: 1s loader-table linear infinite;
@@ -375,3 +439,93 @@ input::placeholder {
 		transform: rotate(360deg);
 	}
 }
+
+@media only screen and (max-width: 1000px) {
+  .new-client-button {
+    padding: 0.4rem .8rem;
+  }
+
+  .table tbody td {
+    font-size: .9rem;
+  }
+
+  .table thead tr th {
+    font-size: .8rem;
+  }
+
+  .table th,
+  .table td {
+    min-width: 10rem;
+    max-width: 10rem;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  .field {
+    max-width: 100%;;
+  }
+
+  .trash-button {
+    font-size: 1rem;
+  }
+
+  .edit-button {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .table tbody th,
+  .table tbody td {
+    font-size: .79rem;
+    padding: 0.813rem;
+    padding: 0.813rem;
+    min-width: 9.5rem;
+    max-width: 9.5rem;
+  }
+
+  .trash-button {
+    font-size: .9rem;
+  }
+
+  .edit-button {
+    font-size: .9rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .header nav span {
+    color: white;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 700;
+  }
+  
+  .header nav a {
+    font-size: .8rem;
+    font-weight: 700;
+  }
+
+  .content-new-client-button {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .filter {
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .filter input {
+    width: 100%;
+  }
+
+  .new-client-button {
+    width: 100%;
+  }
+}
+

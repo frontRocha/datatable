@@ -12,7 +12,8 @@
 <body class="body-color">
     <header class="header">
         <nav>
-
+            <span>-CrudClients-</span>
+            <a href="https://github.com/frontRocha" target="_blank">Meu Github</a>
         </nav>
     </header>
 
@@ -65,12 +66,20 @@
     <main class="main-content">
         <div class="content">
             <div class="content-new-client-button">
+                <div class="filter">
+                    <label for="filterInput">Filtrar por Nome:</label>
+                    <input type="text" id="filterInput" onInput="handleFilterChange()"  placeholder="Cliente"/>
+                </div>
+
                 <button class="new-client-button" id="new-client-button">
                     <i class="ph ph-plus icon-new-button"></i>
                     <span>Adicionar cliente</span>
                 </button>
             </div>
             <div class="datatable">
+                <div class="loader" id="loader">
+                    <p class="loader-table"></p>
+                </div>
                 <table class="table" id="data-table">
                     <thead>
                         <tr>
@@ -80,12 +89,8 @@
                             <th>Endereço</th>
                             <th></th>
                         </tr>
-                    </thead>
-                    <div class="loader" id="loader">
-                        <p class="loader-table"></p>
-                    </div>
+                    </thead>        
                     <tbody>
-
                     </tbody>
                 </table>
             </div>

@@ -10,6 +10,7 @@ const buttonConfirmData = document.getElementById('sendData');
 const buttonCancelData = document.getElementById('cancelData');
 const loaderTable = document.getElementById('loader');
 const filterInput = document.getElementById('filterInput');
+const messageError = document.getElementById('messageError')
 
 let isEditing = false;
 let idClientEditing;
@@ -31,6 +32,7 @@ async function postData() {
     try {
         validateForm()
         clearFilter();
+        clearMessageError();
 
         if (isEditing) {
             await editClient();
@@ -42,8 +44,8 @@ async function postData() {
         closeModal();
         clearFields();
     } catch (error) {
-        console.log(error)
-        console.error('Erro ao enviar dados:', error.message);
+        setMessageError(error.message)
+        return error;
     }
 }
 
@@ -94,7 +96,7 @@ async function editClient() {
         });
 
         clearIdClient();
-        editIsEditing();
+        disableEdit();
     } catch (error) {
         throw error;
     }
@@ -199,13 +201,9 @@ const handleDelete = async (item) => {
 
 const handleEdit = (item) => {
     idClientEditing = item.id;
-    isEditing = true;
+    enableEdit();
     openModal();
     populateFields(item);
-}
-
-const editIsEditing = () => {
-    isEditing = !isEditing;
 }
 
 const clearIdClient = () => {
@@ -219,6 +217,7 @@ const openModal = () => {
 
 const closeModal = () => {
     clearFields();
+    disableEdit();
     modalContainer.classList.remove("active");
     setTimeout(() => {
         modalContainer.style.display = "none";
@@ -228,7 +227,14 @@ const closeModal = () => {
 const cancelData = () => {
     closeModal();
     clearIdClient();
-    editIsEditing();
+}
+
+const setMessageError = (message) => {
+    messageError.textContent = message;
+}
+
+const clearMessageError = () => {
+    messageError.textContent = "";
 }
 
 const showLoaderTable = () => {
@@ -243,12 +249,19 @@ const clearFilter = () => {
     filterInput.value = ""
 }
 
+const disableEdit = () => {
+    isEditing = false;
+}
+
+const enableEdit = () => {
+    isEditing = true;
+}
+
 loadAndDisplayData();
 
 buttonCloseModal.addEventListener("click", closeModal);
 buttonOpenModal.addEventListener("click", openModal);
 buttonConfirmData.addEventListener("click", postData);
 buttonCancelData.addEventListener("click", cancelData);
-
 filterInput.addEventListener('input', handleFilterChange);
 

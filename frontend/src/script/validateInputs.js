@@ -26,3 +26,4 @@ function validateClientEmail() {
         throw new Error('Por favor, insira um endereço de e-mail válido.');
     }
 }
+

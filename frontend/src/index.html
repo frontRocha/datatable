@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste Técnico</title>
+    <title>-CrudClients-</title>
     <link rel="stylesheet" type="text/css" href="./styles/styles.css" media="screen" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
@@ -55,6 +55,9 @@
                         <input type="clientEmail" name="clientEmail" id="clientEmail" placeholder="Digite seu e-mail">
                     </div>
                 </form>
+                <div class="message-error">
+                    <span id="messageError"></span>
+                </div>
                 <div class="confirm-data">
                     <button class="cancel-button" id="cancelData">Cancelar</button>
                     <button class="confirm-button" id="sendData">Confirmar</button>
@@ -68,7 +71,7 @@
             <div class="content-new-client-button">
                 <div class="filter">
                     <label for="filterInput">Filtrar por Nome:</label>
-                    <input type="text" id="filterInput" onInput="handleFilterChange()"  placeholder="Cliente"/>
+                    <input type="text" id="filterInput" onInput="handleFilterChange()" placeholder="Cliente" />
                 </div>
 
                 <button class="new-client-button" id="new-client-button">
@@ -77,9 +80,6 @@
                 </button>
             </div>
             <div class="datatable">
-                <div class="loader" id="loader">
-                    <p class="loader-table"></p>
-                </div>
                 <table class="table" id="data-table">
                     <thead>
                         <tr>
@@ -89,11 +89,16 @@
                             <th>Endereço</th>
                             <th></th>
                         </tr>
-                    </thead>        
+                    </thead>
                     <tbody>
+                        
                     </tbody>
                 </table>
+                <div class="loader" id="loader">
+                    <p class="loader-table"></p>
+                </div>
             </div>
+            
         </div>
     </main>
 

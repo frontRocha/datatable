@@ -15,7 +15,7 @@
 }
 
 .body-color {
-  background-color: #EFF3F9;
+  background-color: #eff3f9;
 }
 
 .header {
@@ -36,7 +36,7 @@
 }
 
 .header nav a {
-  font-size: .9rem;
+  font-size: 0.9rem;
   text-decoration: none;
   color: white;
   font-weight: 700;
@@ -71,7 +71,7 @@
 .filter {
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .filter label {
@@ -80,12 +80,12 @@
 }
 
 .filter input {
-  font-size: .9rem;
+  font-size: 0.9rem;
   outline: none;
   padding: 0.3rem 0.6rem;
   border-radius: 6px;
   border: 1px solid #e7e2e7;
-  background: #ECEDF2;
+  background: #ecedf2;
   color: black;
   font-weight: 600;
 }
@@ -212,7 +212,7 @@
   padding: 0.3rem 0.6rem;
   border-radius: 6px;
   border: 1px solid #e7e2e7;
-  background: #ECEDF2;
+  background: #ecedf2;
   color: black;
   font-weight: 600;
   font-size: 1rem;
@@ -223,13 +223,13 @@ input::placeholder {
 }
 
 .message-error {
-  font-size: .9rem;
+  font-size: 0.9rem;
   width: 100%;
   height: 30px;
   background-color: #f5f5f5;
   text-align: center;
   font-weight: 700;
-  color: #D45F5F;
+  color: #d45f5f;
 }
 
 .confirm-data {
@@ -245,7 +245,7 @@ input::placeholder {
   font-size: 0.8rem;
   border: 1px solid #fb8f8f;
   border-radius: 6px;
-  padding: 0.2rem .9rem;
+  padding: 0.2rem 0.9rem;
   color: white;
   background-color: #fb8f8f;
   cursor: pointer;
@@ -256,7 +256,7 @@ input::placeholder {
 }
 
 .confirm-button {
-  font-size: .9rem;
+  font-size: 0.9rem;
   border: 1px solid white;
   border-radius: 6px;
   padding: 0.4rem 2rem;
@@ -305,7 +305,7 @@ tbody td {
 }
 
 .table thead th {
-  padding: .625rem;
+  padding: 0.625rem;
   font-size: 0.9rem;
   text-align: left;
   border-bottom: 1px solid #e5e5e5;
@@ -353,7 +353,7 @@ tr:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .edit-button {
@@ -361,8 +361,8 @@ tr:hover {
   justify-content: center;
   align-items: center;
   border: 0;
-  border-radius: .375rem;
-  padding: .5rem;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
   background-color: var(--primary-background);
   color: white;
   cursor: pointer;
@@ -378,8 +378,8 @@ tr:hover {
   justify-content: center;
   align-items: center;
   border: 0;
-  border-radius: .375rem;
-  padding: .5rem;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
   background-color: #fb8f8f;
   color: white;
   cursor: pointer;
@@ -391,7 +391,7 @@ tr:hover {
 }
 
 .loader {
-  padding-top: .85rem;
+  padding-top: 0.85rem;
   display: none;
   justify-content: center;
   align-items: center;
@@ -402,66 +402,66 @@ tr:hover {
 .loader-table {
   width: 1.25rem;
   height: 1.25rem;
-	border: .2em dotted currentcolor;
-	border-radius: 50%;
-	animation: 1s loader-table linear infinite;
+  border: 0.2em dotted currentcolor;
+  border-radius: 50%;
+  animation: 1s loader-table linear infinite;
 }
 
 .datatable::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
-	border-radius: 10px;
-	background-color: #F5F5F5;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #f5f5f5;
 }
 
 .datatable::-webkit-scrollbar {
   width: 6px;
   height: 2px;
-	background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .datatable::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.1);
-	background-color: #555;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #555;
 }
 
 .table td::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.1);
-	background-color: #555;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #555;
 }
 
 .table td::-webkit-scrollbar-track-piece {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .table td::-webkit-scrollbar {
   height: 4px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 @keyframes loader-table {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media only screen and (max-width: 1000px) {
   .new-client-button {
-    padding: 0.4rem .8rem;
+    padding: 0.4rem 0.8rem;
   }
 
   .table tbody td {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   .table thead tr th {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   .table th,
@@ -475,7 +475,7 @@ tr:hover {
   }
 
   .field {
-    max-width: 100%;;
+    max-width: 100%;
   }
 
   .trash-button {
@@ -490,7 +490,7 @@ tr:hover {
 @media only screen and (max-width: 768px) {
   .table tbody th,
   .table tbody td {
-    font-size: .79rem;
+    font-size: 0.79rem;
     padding: 0.813rem;
     padding: 0.813rem;
     min-width: 9.5rem;
@@ -506,12 +506,12 @@ tr:hover {
   .header nav span {
     color: white;
     cursor: pointer;
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: 700;
   }
-  
+
   .header nav a {
-    font-size: .8rem;
+    font-size: 0.8rem;
     font-weight: 700;
   }
 
@@ -535,4 +535,3 @@ tr:hover {
     width: 100%;
   }
 }
-

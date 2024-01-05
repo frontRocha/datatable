@@ -7,6 +7,9 @@ Acesse a demonstração do projeto aqui: <a href="https://drive.google.com/file/
 
 Este projeto consiste em uma aplicação web de gerenciamento de clientes (CrudClients) que permite realizar operações CRUD (Create, Read, Update, Delete) em dados de clientes. A aplicação é dividida em um frontend desenvolvido em JavaScript e um backend implementado em Java com o framework Spring Boot.
 
+## Clone o repositório
+Link: git clone https://github.com/seu-usuario/crud-clients.git
+
 ## Tecnologias Utilizadas
 
 ### Frontend (JavaScript, CSS3 e HTML5)
@@ -42,3 +45,4 @@ A aplicação utiliza o MySQL como banco de dados. Configure as seguintes propri
 spring.datasource.url=jdbc:mysql://localhost:3306/nome_do_banco
 spring.datasource.username=seu_usuario
 spring.datasource.password=sua_senha
+```

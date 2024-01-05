@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Técnico</title>
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css" media="screen" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body class="body-color">
+    <header class="header">
+        <nav>
+
+        </nav>
+    </header>
+
+    <div class="modal-container" id="modalContainer">
+        <div class="modal-content">
+            <div class="header-modal">
+                <div class="title-modal">
+                    <div class="icon">
+                        <i class="ph ph-user"></i>
+                    </div>
+                    <div>
+                        <span class="title">
+                            Registrando cliente
+                        </span>
+                    </div>
+                </div>
+                <div class="close-modal">
+                    <span class="close-button" id="close-modal">&times;</span>
+                </div>
+            </div>
+            <div class="body-modal">
+                <form class="form">
+                    <div class="field">
+                        <label for="clientName">Nome</label>
+                        <input type="clientName" name="clientName" id="clientName" placeholder="Digite seu nome">
+                    </div>
+                    <div class="field">
+                        <label for="clientAddress">Endereço</label>
+                        <input type="clientAddress" name="clientAddress" id="clientAddress"
+                            placeholder="Digite seu endereço">
+                    </div>
+                    <div class="field">
+                        <label for="clientPhoneNumber">Número</label>
+                        <input type="clientPhoneNumber" name="clientPhoneNumber" id="clientPhoneNumber"
+                            placeholder="Digite seu número">
+                    </div>
+                    <div class="field">
+                        <label for="clientEmail">E-mail</label>
+                        <input type="clientEmail" name="clientEmail" id="clientEmail" placeholder="Digite seu e-mail">
+                    </div>
+                </form>
+                <div class="confirm-data">
+                    <button class="cancel-button" id="cancelData">Cancelar</button>
+                    <button class="confirm-button" id="sendData">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="content">
+            <div class="content-new-client-button">
+                <button class="new-client-button" id="new-client-button">
+                    <i class="ph ph-plus icon-new-button"></i>
+                    <span>Adicionar cliente</span>
+                </button>
+            </div>
+            <div class="datatable">
+                <table class="table" id="data-table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
+                            <th>Endereço</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <div class="loader" id="loader">
+                        <p class="loader-table"></p>
+                    </div>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="./script/validateInputs.js"></script>
+    <script src="./script/script.js"></script>
+</body>
+
+</html>

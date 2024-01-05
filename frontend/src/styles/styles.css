@@ -1,0 +1,377 @@
+:root {
+  --primary-background: #877aff;
+}
+
+@font-face {
+  font-family: Axiforma;
+  src: url("../fonts/Axiforma-Thin.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Axiforma;
+}
+
+.body-color {
+  background-color: #fcedeb;
+}
+
+.header {
+  padding: 1.4rem 1rem;
+  background-color: white;
+}
+
+.main-content {
+  max-width: 81.25rem;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.content-new-client-button {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.new-client-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: Axiforma;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 6px;
+  border: 0;
+  font-weight: 500;
+  background-color: var(--primary-background);
+  padding: 0.4rem 1rem;
+  color: white;
+}
+
+.new-client-button:hover {
+  background-color: #766aff;
+}
+
+.new-client-button > i {
+  color: white;
+}
+
+.new-client-button > span {
+  color: white;
+}
+
+.modal-container {
+  z-index: 2;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition-duration: 0.2s;
+}
+
+.modal-container.active {
+  opacity: 1;
+  transition-duration: 0.2s;
+}
+
+.modal-content {
+  border-radius: 8px 8px 6px 6px;
+  background-color: #fefefe;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  min-width: auto;
+  max-width: 500px;
+  margin: auto;
+  position: relative;
+}
+
+.header-modal {
+  border-radius: 6px 6px 0 0;
+  padding: 0.1rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-background);
+}
+
+.title-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  color: white;
+}
+
+.close-button {
+  position: relative;
+  font-size: 1.625rem;
+  cursor: pointer;
+  color: white;
+}
+
+.icon {
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem;
+  color: var(--primary-background);
+}
+
+.title {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.form {
+  padding: 2rem 1.2rem;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+input {
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #e7e2e7;
+  background: #f2ecf2;
+  color: black;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: #929292;
+}
+
+.confirm-data {
+  display: flex;
+  justify-content: end;
+  gap: 0.5rem;
+  background-color: #f5f5f5;
+  padding: 0.6rem 1rem;
+  border-radius: 0 0 4px 4px;
+}
+
+.cancel-button {
+  font-size: 0.8rem;
+  border: 1px solid #fb8f8f;
+  border-radius: 6px;
+  padding: 0.2rem .9rem;
+  color: white;
+  background-color: #fb8f8f;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: #d45f5f;
+}
+
+.confirm-button {
+  font-size: .9rem;
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 0.4rem 2rem;
+  color: white;
+  background-color: var(--primary-background);
+  cursor: pointer;
+}
+
+.confirm-button:hover {
+  background-color: #766aff;
+}
+
+.body-modal {
+  border-radius: 50%;
+}
+
+.datatable {
+  background-color: white;
+  max-height: 37.5rem;
+  min-height: 37.5rem;
+  overflow-y: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  font-family: sans-serif;
+  border: 1px solid #e5e5e5;
+}
+
+.table thead {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+}
+
+.table thead th {
+  padding: .625rem;
+  font-size: 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+  color: #333;
+  font-weight: 600;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #e5e5e5;
+  font-weight: 600;
+}
+
+.table tbody td {
+  padding: .625rem;
+  text-align: left;
+  color: #241937;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.table tbody td:nth-child(2) {
+  color: var(--primary-background);
+}
+
+.table th,
+.table td {
+  min-width: 12.5;
+  max-width: 12.5;
+  overflow-y: auto;
+}
+
+.options {
+  display: flex;
+  gap: .5rem;
+}
+
+.edit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: .375rem;
+  padding: .5rem;
+  background-color: var(--primary-background);
+  color: white;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: #766aff;
+}
+
+.trash-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: .375rem;
+  padding: .5rem;
+  background-color: #fb8f8f;
+  color: white;
+  cursor: pointer;
+}
+
+.trash-button:hover {
+  background-color: #d45f5f;
+}
+
+@media screen (max-width: 768px) {
+  .table {
+    font-size: 0.9rem;
+  }
+
+  .table thead th {
+    padding: 0.313rem;
+  }
+
+  .table tbody td {
+    padding: 0.313rem;
+  }
+}
+
+.toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ccc;
+  z-index: 1000;
+}
+
+.toast .titulo {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.toast .mensagem {
+  font-size: 14px;
+}
+
+.loader {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.loader-table {
+  width: 20px;
+  height: 20px;
+	border: .2em dotted currentcolor;
+	border-radius: 50%;
+	animation: 1s loader-table linear infinite;
+}
+
+@keyframes loader-table {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

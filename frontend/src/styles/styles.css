@@ -277,13 +277,13 @@ input::placeholder {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.007);
   width: 100%;
   background-color: white;
-  min-width: 400px;
   max-height: 37.5rem;
   min-height: 37.5rem;
   overflow-y: auto;
 }
 
 .table {
+  min-width: 400px;
   width: 100%;
   border-collapse: collapse;
   background-color: #fff;
@@ -497,12 +497,8 @@ tr:hover {
     max-width: 9.5rem;
   }
 
-  .trash-button {
-    font-size: .9rem;
-  }
-
-  .edit-button {
-    font-size: .9rem;
+  .options {
+    width: 100%;
   }
 }
 

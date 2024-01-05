@@ -216,6 +216,7 @@ const openModal = () => {
 }
 
 const closeModal = () => {
+    clearMessageError();
     clearFields();
     disableEdit();
     modalContainer.classList.remove("active");

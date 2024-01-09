@@ -151,13 +151,6 @@ function createEditButton(item) {
     return editButton;
 }
 
-function validateForm() {
-    validateClientName();
-    validateClientAddress();
-    validateClientPhoneNumber();
-    validateClientEmail();
-}
-
 function renderTable(data, filter) {
     const tableBody = document.getElementById('data-table').getElementsByTagName('tbody')[0];
     tableBody.innerHTML = '';
@@ -184,6 +177,13 @@ function renderTable(data, filter) {
 function handleFilterChange() {
     const filterValue = filterInput.value.trim();
     loadAndDisplayData(filterValue);
+}
+
+const validateForm = () => {
+    validateClientName();
+    validateClientAddress();
+    validateClientPhoneNumber();
+    validateClientEmail();
 }
 
 const handleDelete = async (item) => {
